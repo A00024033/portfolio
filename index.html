@@ -23,45 +23,100 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <header>
-    <div class="hero-bg-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-    </div>
+  <header id="hero">
+    <canvas id="particles"></canvas>
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+
+    <button id="dark-mode-toggle">🌙</button>
+
     <div class="container hero-content">
       <div class="hero-inner">
         <div class="hero-text">
           <p class="hero-eyebrow">Hello, I'm</p>
-          <h1>Hajar <span class="highlight">Natiq</span></h1>
+          <h1 class="hero-name">Hajar<br><span class="highlight">Natiq</span></h1>
           <p class="hero-subtitle">Computer Science Student · Aspiring Software Engineer</p>
           <p class="hero-sub2">BSc Computer Science @ Roehampton University · Class of 2027</p>
+          <div class="hero-chips">
+            <span class="chip">Python</span>
+            <span class="chip">C++</span>
+            <span class="chip">Java</span>
+            <span class="chip">SQL</span>
+            <span class="chip">AI / ML</span>
+            <span class="chip">JavaScript</span>
+          </div>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Contact Me</a>
             <a href="Hajar_Natiq_CV.pdf" download class="btn btn-outline">📄 Download CV</a>
           </div>
         </div>
         <div class="hero-photo-wrap">
-          <img src="Hajar.jpg" alt="Hajar Natiq" class="hero-photo">
+          <div class="photo-ring">
+            <svg class="ring-svg" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="110" cy="110" r="104" stroke="url(#ringGrad)" stroke-width="2.5" stroke-dasharray="16 8" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="ringGrad" x1="0" y1="0" x2="220" y2="220" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#f2a3b3"/>
+                  <stop offset="50%" stop-color="#b56576"/>
+                  <stop offset="100%" stop-color="#f2a3b3"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <img src="Hajar.jpg" alt="Hajar Natiq" class="hero-photo">
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-num">7+</span>
+              <span class="stat-lbl">Skills</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">3</span>
+              <span class="stat-lbl">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">2027</span>
+              <span class="stat-lbl">Grad</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <button id="dark-mode-toggle">🌙</button>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-dot"></div>
+      <div class="scroll-dot"></div>
+      <div class="scroll-dot"></div>
+    </div>
   </header>
 
   <section id="about" class="container">
     <h2><span class="section-icon">👩‍💻</span> About Me</h2>
     <p>
-      I'm a 21-year-old Computer Science student at Roehampton University, passionate about software development,
-      problem-solving, and IT systems. With a unique background spanning medical studies and competitive programming,
-      I bring analytical rigour and creative thinking to every project. I'm actively seeking internships to apply
-      my skills and gain hands-on experience in the tech industry.
+      I'm a 22-year-old Computer Science student at Roehampton University, passionate about software development,
+      problem-solving, AI, and IT systems. With a unique background spanning medical studies and competitive programming,
+      I bring analytical rigour and creative thinking to every project. Currently serving as <strong>Vice President of the AI Society</strong> at Roehampton University,
+      I'm actively building bridges between students and the world of artificial intelligence.
+      I'm actively seeking internships to apply my skills and gain hands-on experience in the tech industry.
     </p>
   </section>
 
   <section id="timeline" class="container">
     <h2><span class="section-icon">🏆</span> Career & Education</h2>
     <div class="timeline">
+
+      <div class="timeline-item job">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>VP – AI Society, Roehampton University</h3>
+            <span class="date">2025 – Present</span>
+          </div>
+          <p>Vice President of the AI Society – organising events, workshops, and fostering student interest in artificial intelligence and machine learning.</p>
+        </div>
+      </div>
+
       <div class="timeline-item job">
         <div class="timeline-dot"></div>
         <div class="timeline-content">
@@ -72,6 +127,7 @@
           <p>Bartender / Waitress – delivering excellent customer service in a fast-paced environment.</p>
         </div>
       </div>
+
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-content">
@@ -82,6 +138,7 @@
           <p>BSc Computer Science – developing software skills and working on real-world projects.</p>
         </div>
       </div>
+
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-content">
@@ -92,6 +149,7 @@
           <p>Faculté de Médecine et de Pharmacie – built strong scientific and analytical foundations.</p>
         </div>
       </div>
+
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-content">
@@ -102,6 +160,7 @@
           <p>Competed in coding Olympiads; in 2021, assisted as a teacher teaching C++ to students.</p>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -263,6 +322,57 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('section, .project-card, .timeline-item, .lang-card, .contact-card').forEach(el => observer.observe(el));
+
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    const hero = document.getElementById('hero');
+    let W, H, pts;
+
+    function initParticles() {
+      W = canvas.width = hero.offsetWidth;
+      H = canvas.height = hero.offsetHeight;
+      pts = Array.from({length: 55}, () => ({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: Math.random() * 2.5 + 0.5,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        alpha: Math.random() * 0.5 + 0.15,
+        color: Math.random() > 0.5 ? '181,101,118' : '242,163,179'
+      }));
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, W, H);
+      for (let i = 0; i < pts.length; i++) {
+        const p = pts[i];
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+        if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+        for (let j = i + 1; j < pts.length; j++) {
+          const q = pts[j];
+          const dx = p.x - q.x, dy = p.y - q.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 110) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(q.x, q.y);
+            ctx.strokeStyle = `rgba(181,101,118,${0.12 * (1 - dist / 110)})`;
+            ctx.lineWidth = 0.7;
+            ctx.stroke();
+          }
+        }
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${p.color},${p.alpha})`;
+        ctx.fill();
+      }
+      requestAnimationFrame(drawParticles);
+    }
+
+    initParticles();
+    drawParticles();
+    window.addEventListener('resize', initParticles);
   </script>
 
 </body>
