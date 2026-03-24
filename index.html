@@ -11,10 +11,8 @@
 </head>
 <body>
 
-  <!-- Menu Toggle -->
   <button id="menu-toggle" aria-label="Toggle menu">☰</button>
 
-  <!-- Sidebar Navigation -->
   <nav id="sidebar">
     <div class="sidebar-logo">HN</div>
     <a href="#about">About</a>
@@ -25,7 +23,6 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Header / Hero -->
   <header>
     <div class="hero-bg-shapes">
       <div class="shape shape-1"></div>
@@ -33,30 +30,35 @@
       <div class="shape shape-3"></div>
     </div>
     <div class="container hero-content">
-      <p class="hero-eyebrow">Hello, I'm</p>
-      <h1>Hajar <span class="highlight">Natiq</span></h1>
-      <p class="hero-subtitle">Computer Science Student · Aspiring Software Engineer</p>
-      <p class="hero-sub2">BSc Computer Science @ Roehampton University · Class of 2027</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Contact Me</a>
-        <a href="Hajar_Natiq_CV.pdf" download class="btn btn-outline">📄 Download CV</a>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">Hello, I'm</p>
+          <h1>Hajar <span class="highlight">Natiq</span></h1>
+          <p class="hero-subtitle">Computer Science Student · Aspiring Software Engineer</p>
+          <p class="hero-sub2">BSc Computer Science @ Roehampton University · Class of 2027</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Contact Me</a>
+            <a href="Hajar_Natiq_CV.pdf" download class="btn btn-outline">📄 Download CV</a>
+          </div>
+        </div>
+        <div class="hero-photo-wrap">
+          <img src="Hajar.jpg" alt="Hajar Natiq" class="hero-photo">
+        </div>
       </div>
     </div>
     <button id="dark-mode-toggle">🌙</button>
   </header>
 
-  <!-- About Section -->
   <section id="about" class="container">
     <h2><span class="section-icon">👩‍💻</span> About Me</h2>
     <p>
-      I'm a 21-year-old Computer Science student at Roehampton University, passionate about software development, 
-      problem-solving, and IT systems. With a unique background spanning medical studies and competitive programming, 
-      I bring analytical rigour and creative thinking to every project. I'm actively seeking internships to apply 
+      I'm a 21-year-old Computer Science student at Roehampton University, passionate about software development,
+      problem-solving, and IT systems. With a unique background spanning medical studies and competitive programming,
+      I bring analytical rigour and creative thinking to every project. I'm actively seeking internships to apply
       my skills and gain hands-on experience in the tech industry.
     </p>
   </section>
 
-  <!-- Timeline Section -->
   <section id="timeline" class="container">
     <h2><span class="section-icon">🏆</span> Career & Education</h2>
     <div class="timeline">
@@ -103,7 +105,6 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
   <section id="skills" class="container">
     <h2><span class="section-icon">💻</span> Skills</h2>
     <div class="skills-grid">
@@ -117,35 +118,33 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects" class="container">
     <h2><span class="section-icon">📂</span> Projects</h2>
     <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-icon">🚖</div>
+        <h3>AI Taxi Grid Agent</h3>
+        <p class="project-tech">Python · AI · Pathfinding</p>
+        <p>An intelligent taxi agent navigating a grid environment using AI search algorithms to pick up and drop off passengers optimally.</p>
+        <a href="https://github.com/A00024033/AI-agent" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
       <div class="project-card">
         <div class="project-icon">🐾</div>
         <h3>Veterinary Management System</h3>
         <p class="project-tech">C++ · OOP</p>
         <p>A role-based OOP project for managing appointments, pets, and clinic operations.</p>
-        <a href="https://github.com/Evahajar/veterinary-management-system" target="_blank" class="project-link">View on GitHub →</a>
+        <a href="https://github.com/A00024033/veterinary-management-system" target="_blank" class="project-link">View on GitHub →</a>
       </div>
       <div class="project-card">
         <div class="project-icon">🛒</div>
         <h3>E-commerce Database Analysis</h3>
         <p class="project-tech">SQL · Data Analysis</p>
         <p>SQL queries and reporting from a simulated e-commerce platform database.</p>
-        <a href="https://github.com/Evahajar/E-commerce-Database-Analysis" target="_blank" class="project-link">View on GitHub →</a>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🌐</div>
-        <h3>Personal Portfolio Website</h3>
-        <p class="project-tech">HTML · CSS · JavaScript</p>
-        <p>A responsive portfolio website showcasing my skills, projects, and background.</p>
-        <a href="https://github.com/Evahajar/portfolio" target="_blank" class="project-link">View on GitHub →</a>
+        <a href="https://github.com/A00024033/E-commerce-Database-Analysis" target="_blank" class="project-link">View on GitHub →</a>
       </div>
     </div>
   </section>
 
-  <!-- Languages Section -->
   <section id="languages" class="container">
     <h2><span class="section-icon">🌍</span> Languages</h2>
     <div class="languages-grid">
@@ -180,7 +179,6 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="container">
     <h2><span class="section-icon">📞</span> Contact</h2>
     <div class="contact-grid">
@@ -205,11 +203,11 @@
           <p class="contact-value">hajar-natiq</p>
         </div>
       </a>
-      <a href="https://github.com/Evahajar" target="_blank" class="contact-card">
+      <a href="https://github.com/A00024033" target="_blank" class="contact-card">
         <span class="contact-icon">🐙</span>
         <div>
           <p class="contact-label">GitHub</p>
-          <p class="contact-value">Evahajar</p>
+          <p class="contact-value">A00024033</p>
         </div>
       </a>
       <a href="https://leetcode.com/u/moonvsh/" target="_blank" class="contact-card">
@@ -234,26 +232,22 @@
   </footer>
 
   <script>
-    // Dark mode toggle
     const toggleBtn = document.getElementById('dark-mode-toggle');
     toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
       toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
     });
 
-    // Sidebar toggle
     document.getElementById('menu-toggle').addEventListener('click', () => {
       document.getElementById('sidebar').classList.toggle('active');
     });
 
-    // Close sidebar on nav link click
     document.querySelectorAll('#sidebar a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('sidebar').classList.remove('active');
       });
     });
 
-    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -262,7 +256,6 @@
       });
     });
 
-    // Scroll reveal animation
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
