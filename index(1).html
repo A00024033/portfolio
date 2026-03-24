@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hajar Natiq – Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Menu Toggle -->
+  <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+  <!-- Sidebar Navigation -->
+  <nav id="sidebar">
+    <div class="sidebar-logo">HN</div>
+    <a href="#about">About</a>
+    <a href="#timeline">Career</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#languages">Languages</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Header / Hero -->
+  <header>
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container hero-content">
+      <p class="hero-eyebrow">Hello, I'm</p>
+      <h1>Hajar <span class="highlight">Natiq</span></h1>
+      <p class="hero-subtitle">Computer Science Student · Aspiring Software Engineer</p>
+      <p class="hero-sub2">BSc Computer Science @ Roehampton University · Class of 2027</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Contact Me</a>
+        <a href="Hajar_Natiq_CV.pdf" download class="btn btn-outline">📄 Download CV</a>
+      </div>
+    </div>
+    <button id="dark-mode-toggle">🌙</button>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="container">
+    <h2><span class="section-icon">👩‍💻</span> About Me</h2>
+    <p>
+      I'm a 21-year-old Computer Science student at Roehampton University, passionate about software development, 
+      problem-solving, and IT systems. With a unique background spanning medical studies and competitive programming, 
+      I bring analytical rigour and creative thinking to every project. I'm actively seeking internships to apply 
+      my skills and gain hands-on experience in the tech industry.
+    </p>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="container">
+    <h2><span class="section-icon">🏆</span> Career & Education</h2>
+    <div class="timeline">
+      <div class="timeline-item job">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>Common Pizza</h3>
+            <span class="date">2025 – Present</span>
+          </div>
+          <p>Bartender / Waitress – delivering excellent customer service in a fast-paced environment.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>Roehampton University</h3>
+            <span class="date">2024 – 2027</span>
+          </div>
+          <p>BSc Computer Science – developing software skills and working on real-world projects.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>Medical Studies</h3>
+            <span class="date">2022 – 2024</span>
+          </div>
+          <p>Faculté de Médecine et de Pharmacie – built strong scientific and analytical foundations.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3>Moroccan Olympiads & Teaching</h3>
+            <span class="date">2016 – 2021</span>
+          </div>
+          <p>Competed in coding Olympiads; in 2021, assisted as a teacher teaching C++ to students.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="container">
+    <h2><span class="section-icon">💻</span> Skills</h2>
+    <div class="skills-grid">
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"><p>C++</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><p>Python</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"><p>Java</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><p>JavaScript</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"><p>HTML</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"><p>CSS</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"><p>SQL</p></div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container">
+    <h2><span class="section-icon">📂</span> Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-icon">🐾</div>
+        <h3>Veterinary Management System</h3>
+        <p class="project-tech">C++ · OOP</p>
+        <p>A role-based OOP project for managing appointments, pets, and clinic operations.</p>
+        <a href="https://github.com/Evahajar/veterinary-management-system" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🛒</div>
+        <h3>E-commerce Database Analysis</h3>
+        <p class="project-tech">SQL · Data Analysis</p>
+        <p>SQL queries and reporting from a simulated e-commerce platform database.</p>
+        <a href="https://github.com/Evahajar/E-commerce-Database-Analysis" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🌐</div>
+        <h3>Personal Portfolio Website</h3>
+        <p class="project-tech">HTML · CSS · JavaScript</p>
+        <p>A responsive portfolio website showcasing my skills, projects, and background.</p>
+        <a href="https://github.com/Evahajar/portfolio" target="_blank" class="project-link">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages Section -->
+  <section id="languages" class="container">
+    <h2><span class="section-icon">🌍</span> Languages</h2>
+    <div class="languages-grid">
+      <div class="lang-card">
+        <span class="lang-flag">🇬🇧</span>
+        <div>
+          <strong>English</strong>
+          <span class="lang-level fluent">Fluent</span>
+        </div>
+      </div>
+      <div class="lang-card">
+        <span class="lang-flag">🇫🇷</span>
+        <div>
+          <strong>French</strong>
+          <span class="lang-level fluent">Fluent</span>
+        </div>
+      </div>
+      <div class="lang-card">
+        <span class="lang-flag">🇲🇦</span>
+        <div>
+          <strong>Arabic</strong>
+          <span class="lang-level fluent">Fluent</span>
+        </div>
+      </div>
+      <div class="lang-card">
+        <span class="lang-flag">🇪🇸</span>
+        <div>
+          <strong>Spanish</strong>
+          <span class="lang-level intermediate">Intermediate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container">
+    <h2><span class="section-icon">📞</span> Contact</h2>
+    <div class="contact-grid">
+      <a href="mailto:evahajar2004@gmail.com" class="contact-card">
+        <span class="contact-icon">✉️</span>
+        <div>
+          <p class="contact-label">Email</p>
+          <p class="contact-value">evahajar2004@gmail.com</p>
+        </div>
+      </a>
+      <a href="tel:+447417370118" class="contact-card">
+        <span class="contact-icon">📱</span>
+        <div>
+          <p class="contact-label">Phone</p>
+          <p class="contact-value">+44 7417 370118</p>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/hajar-natiq-895257271/" target="_blank" class="contact-card">
+        <span class="contact-icon">💼</span>
+        <div>
+          <p class="contact-label">LinkedIn</p>
+          <p class="contact-value">hajar-natiq</p>
+        </div>
+      </a>
+      <a href="https://github.com/Evahajar" target="_blank" class="contact-card">
+        <span class="contact-icon">🐙</span>
+        <div>
+          <p class="contact-label">GitHub</p>
+          <p class="contact-value">Evahajar</p>
+        </div>
+      </a>
+      <a href="https://leetcode.com/u/moonvsh/" target="_blank" class="contact-card">
+        <span class="contact-icon">⚡</span>
+        <div>
+          <p class="contact-label">LeetCode</p>
+          <p class="contact-value">moonvsh</p>
+        </div>
+      </a>
+      <a href="https://codeforces.com/profile/Evaa_" target="_blank" class="contact-card">
+        <span class="contact-icon">🏅</span>
+        <div>
+          <p class="contact-label">Codeforces</p>
+          <p class="contact-value">Evaa_</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built with ❤️ by <strong>Hajar Natiq</strong> · © 2025</p>
+  </footer>
+
+  <script>
+    // Dark mode toggle
+    const toggleBtn = document.getElementById('dark-mode-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
+
+    // Sidebar toggle
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('sidebar').classList.toggle('active');
+    });
+
+    // Close sidebar on nav link click
+    document.querySelectorAll('#sidebar a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('sidebar').classList.remove('active');
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Scroll reveal animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section, .project-card, .timeline-item, .lang-card, .contact-card').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
